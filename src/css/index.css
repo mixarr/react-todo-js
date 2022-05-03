@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+/* TODO LIST START */
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+/* TODO LIST END */
+
+
+
+/* TODO ITEM START */
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 20px;
+  border: 2px solid #682da6;
+  border-radius: 8px;
+}
+
+.todo-item__info {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+/* TODO ITEM END */
+
+
+
+/* TODO-FORM START */
+
+.todo-form {
+  border-radius: 8px;
+  border: 2px solid #682da6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.todo-form__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.todo-form button {
+  align-self: flex-start;
+}
+
+/* TODO-FORM END */
+
+
+
+/* TODO-FILTERS START */
+
+.todo-filters {
+  padding: 20px;
+  border: 2px solid #682da6;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.todo-filters__buttons {
+  display: flex;
+  column-gap: 10px;
+  border-radius: 8px;
+  background-color: #f2f4f6;
+  padding: 10px;
+}
+
+.todo-filters__buttons > * {
+  width: 33%;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+@media (any-hover) {
+  .todo-filters__buttons button:hover {
+    background-color: #682da6;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 500px) {
+  .todo-filters__buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .todo-filters__buttons > * {
+    width: auto;
+  }
+}
+
+/* TODO-FILTERS END */
+
+
+/* CHECKBOX START */
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  padding-right: 14px;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox__label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(83, 167, 15);
+  border-radius: 4px;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__label {
+  background-color: rgb(77, 197, 25);
+}
+
+/* CHECKBOX END */
+
+
+
+/* INPUT START */
+
+.custom-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #222222;
+}
+
+/* INPUT END */
+
+
+
+/* BUTTONS START */
+
+.button {
+  color: #682da6;
+  border-radius: 8px;
+  border: 2px solid #682da6;
+  background-color: transparent;
+  padding: 10px 16px;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  cursor: pointer;
+}
+
+@media (any-hover) {
+  .button:hover {
+    color: #ffffff;
+    background-color: #682da6;
+  }
+}
+
+/* BUTTONS END */
